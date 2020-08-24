@@ -1,0 +1,119 @@
+\hypertarget{classelectrical_1_1pulse_1_1_pulse}{}\doxysection{electrical.\+pulse.\+Pulse Class Reference}
+\label{classelectrical_1_1pulse_1_1_pulse}\index{electrical.pulse.Pulse@{electrical.pulse.Pulse}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classelectrical_1_1pulse_1_1_pulse_a1852d153c2c05c5a4c42d699177e1799}{calc\+\_\+time}} (self, ts, ys, Ymax=None, Ymin=None, upper\+\_\+threshold=0.\+9, lower\+\_\+threshold=0.\+1, Tr\+\_\+start\+\_\+min=None, Tr\+\_\+start=None, Ton\+\_\+min=None)
+\begin{DoxyCompactList}\small\item\em Calculate the rise time, fall time, and the time between H\+I\+GH of the pulse signal.\mbox{[}波形の各種時間（立上り、下がり、\+O\+Nなど\mbox{]}を計算) \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classelectrical_1_1pulse_1_1_pulse_a65f9467570d956133a75ba1c599edfd7}{show\+\_\+time}} (self)
+\begin{DoxyCompactList}\small\item\em Show the rise time, fall time, and the time between H\+I\+GH of the pulse signal.\mbox{[}波形の各種時間（立上り、下がり、\+O\+Nなど\mbox{]}を表示) \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classelectrical_1_1pulse_1_1_pulse_a33acb699e49d41fd3c12ff08665d58e2}{save\+\_\+graph}} (self, x, y, xlabel, ylabel, save\+\_\+path, label\+\_\+name=\char`\"{}Y\char`\"{})
+\item 
+def \mbox{\hyperlink{classelectrical_1_1pulse_1_1_pulse_a2228c44cbe45ba847b320122b87fb8ec}{calc\+\_\+rms}} (self, y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classelectrical_1_1pulse_1_1_pulse_a7c1487567e91657c77be54a7190d90db}{pulse\+\_\+times}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classelectrical_1_1pulse_1_1_pulse_a2228c44cbe45ba847b320122b87fb8ec}\label{classelectrical_1_1pulse_1_1_pulse_a2228c44cbe45ba847b320122b87fb8ec}} 
+\index{electrical.pulse.Pulse@{electrical.pulse.Pulse}!calc\_rms@{calc\_rms}}
+\index{calc\_rms@{calc\_rms}!electrical.pulse.Pulse@{electrical.pulse.Pulse}}
+\doxysubsubsection{\texorpdfstring{calc\_rms()}{calc\_rms()}}
+{\footnotesize\ttfamily def electrical.\+pulse.\+Pulse.\+calc\+\_\+rms (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classelectrical_1_1pulse_1_1_pulse_a1852d153c2c05c5a4c42d699177e1799}\label{classelectrical_1_1pulse_1_1_pulse_a1852d153c2c05c5a4c42d699177e1799}} 
+\index{electrical.pulse.Pulse@{electrical.pulse.Pulse}!calc\_time@{calc\_time}}
+\index{calc\_time@{calc\_time}!electrical.pulse.Pulse@{electrical.pulse.Pulse}}
+\doxysubsubsection{\texorpdfstring{calc\_time()}{calc\_time()}}
+{\footnotesize\ttfamily electrical.\+pulse.\+Pulse.\+calc\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ts,  }\item[{}]{ys,  }\item[{}]{Ymax = {\ttfamily None},  }\item[{}]{Ymin = {\ttfamily None},  }\item[{}]{upper\+\_\+threshold = {\ttfamily 0.9},  }\item[{}]{lower\+\_\+threshold = {\ttfamily 0.1},  }\item[{}]{Tr\+\_\+start\+\_\+min = {\ttfamily None},  }\item[{}]{Tr\+\_\+start = {\ttfamily None},  }\item[{}]{Ton\+\_\+min = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Calculate the rise time, fall time, and the time between H\+I\+GH of the pulse signal.\mbox{[}波形の各種時間（立上り、下がり、\+O\+Nなど\mbox{]}を計算) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & times array\mbox{[}時間データのnumpy配列\mbox{]} \\
+\hline
+{\em ts} & amplitude array\mbox{[}立ち上がり開始時間\mbox{]} \\
+\hline
+{\em ts} & times array\mbox{[}立ち上がり開始時間\mbox{]} \\
+\hline
+{\em Ymax} & max of amplitude(default\+:\+None)\mbox{[}振幅の最大値\mbox{]} \\
+\hline
+{\em Ymin} & min of amplitude(default\+:\+None)\mbox{[}振幅の最小値\mbox{]} \\
+\hline
+{\em upper\+\_\+threshold} & upper threshold of amplitude(default\+:0.\+9)\mbox{[}振幅の上限\mbox{]} \\
+\hline
+{\em lower\+\_\+threshold} & lower threshold of amplitude(default\+:0.\+1)\mbox{[}振幅の下限\mbox{]} \\
+\hline
+{\em Tr\+\_\+start\+\_\+min} & Tr start min (default\+:None)\mbox{[}立ち上がり開始時間の最小値\mbox{]} \\
+\hline
+{\em Tr\+\_\+start} & Tr start (default\+:None)\mbox{[}立ち上がり開始時間\mbox{]} \\
+\hline
+{\em Ton\+\_\+min} & Ton min (default\+:None)\mbox{[}O\+Nしている時間の最小値\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em dist\mbox{[}\char`\"{}\+Ymax\char`\"{}\mbox{]}} & max of amplitude\mbox{[}振幅の最大値\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Ymin\char`\"{}\mbox{]}} & min of amplitude\mbox{[}振幅の最小値\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Yamp\char`\"{}\mbox{]}} & amplitude\mbox{[}振幅\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}upper\char`\"{}\mbox{]}} & upper threshold of amplitude\mbox{[}振幅の上限\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}lower\char`\"{}\mbox{]}} & lower threshold of amplitude\mbox{[}振幅の下限\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Tr\+\_\+start\char`\"{}\mbox{]}} & Start of rise time\mbox{[}立ち上がり開始時間\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Tr\+\_\+end\char`\"{}\mbox{]}} & End of rise time\mbox{[}立ち上がり終了時間\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Tr\char`\"{}\mbox{]}} & rise time\mbox{[}立ち上がり時間\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Tf\+\_\+start\char`\"{}\mbox{]}} & Start of rise time\mbox{[}立ち下がり開始時間\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Tf\+\_\+end\char`\"{}\mbox{]}} & Start of rise time\mbox{[}立ち下がり終了時間\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Ton\char`\"{}\mbox{]}} & on time\mbox{[}O\+N中の時間\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Tf\char`\"{}\mbox{]}} & fall time\mbox{[}立ち下がり時間\mbox{]} \\
+\hline
+{\em dist\mbox{[}\char`\"{}\+Tau\char`\"{}\mbox{]}} & Time constant\mbox{[}時定数\mbox{]} \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classelectrical_1_1pulse_1_1_pulse_a33acb699e49d41fd3c12ff08665d58e2}\label{classelectrical_1_1pulse_1_1_pulse_a33acb699e49d41fd3c12ff08665d58e2}} 
+\index{electrical.pulse.Pulse@{electrical.pulse.Pulse}!save\_graph@{save\_graph}}
+\index{save\_graph@{save\_graph}!electrical.pulse.Pulse@{electrical.pulse.Pulse}}
+\doxysubsubsection{\texorpdfstring{save\_graph()}{save\_graph()}}
+{\footnotesize\ttfamily def electrical.\+pulse.\+Pulse.\+save\+\_\+graph (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x,  }\item[{}]{y,  }\item[{}]{xlabel,  }\item[{}]{ylabel,  }\item[{}]{save\+\_\+path,  }\item[{}]{label\+\_\+name = {\ttfamily \char`\"{}Y\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classelectrical_1_1pulse_1_1_pulse_a65f9467570d956133a75ba1c599edfd7}\label{classelectrical_1_1pulse_1_1_pulse_a65f9467570d956133a75ba1c599edfd7}} 
+\index{electrical.pulse.Pulse@{electrical.pulse.Pulse}!show\_time@{show\_time}}
+\index{show\_time@{show\_time}!electrical.pulse.Pulse@{electrical.pulse.Pulse}}
+\doxysubsubsection{\texorpdfstring{show\_time()}{show\_time()}}
+{\footnotesize\ttfamily electrical.\+pulse.\+Pulse.\+show\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Show the rise time, fall time, and the time between H\+I\+GH of the pulse signal.\mbox{[}波形の各種時間（立上り、下がり、\+O\+Nなど\mbox{]}を表示) 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classelectrical_1_1pulse_1_1_pulse_a7c1487567e91657c77be54a7190d90db}\label{classelectrical_1_1pulse_1_1_pulse_a7c1487567e91657c77be54a7190d90db}} 
+\index{electrical.pulse.Pulse@{electrical.pulse.Pulse}!pulse\_times@{pulse\_times}}
+\index{pulse\_times@{pulse\_times}!electrical.pulse.Pulse@{electrical.pulse.Pulse}}
+\doxysubsubsection{\texorpdfstring{pulse\_times}{pulse\_times}}
+{\footnotesize\ttfamily electrical.\+pulse.\+Pulse.\+pulse\+\_\+times}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+electrical/\mbox{\hyperlink{pulse_8py}{pulse.\+py}}\end{DoxyCompactItemize}

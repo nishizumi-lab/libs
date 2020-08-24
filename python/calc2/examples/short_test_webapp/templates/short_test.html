@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+    <nav class="navbar navbar-dark">
+        <a class="navbar-brand" href="https://github.com/nishizumi/libs/tree/master/python/electrical-python/tests/short_test_webapp/">試作中＠ソースコード、要望等はこちら</a>
+    </nav>
+<h2 class="bg-dark text-white bg-gray-9">外部短絡試験・計算機 ＠v0.0.5</h2>
+<form action="/short_test" method="post" class="form-inline">
+    <div class="form-group">
+        <label for="target_voltage" class="bg-dark text-white">試験電圧[V]</label>
+        <input type="number" class="form-control border-success bg-gray-9 text-white" id="target_voltage" name="input" value="{{target_voltage}}" step="0.1" placeholder="例：20">
+    </div>
+    <div class="form-group">
+        <label for="target_current" class="bg-dark text-white">試験電流[A]</label>
+        <input type="number" class="form-control border-success bg-gray-9 text-white" id="target_current" name="input" value="{{target_current}}" step="0.1" placeholder="例：20">
+    </div>
+    <div class="form-group">
+        <label for="power_module_num" class="bg-dark text-white">電源数[S]</label>
+        <input type="number" class="form-control border-success bg-gray-9 text-white" id="power_num" name="input" value="{{power_module_num}}" placeholder="例：20">
+    </div>
+    <div class="form-group">
+        <label for="power_module_max_voltage" class="bg-dark text-white">電源1つの最大電圧[V]</label>
+        <input type="number" class="form-control border-success bg-gray-9 text-white" id="power_module_max_voltage" value="{{power_module_max_voltage}}" step="0.1" name="input" placeholder="例：10">
+    </div>
+    <div class="form-group">
+        <label for="power_module_min_voltage" class="bg-dark text-white">電源1つの最小電圧[V]</label>
+        <input type="number" class="form-control border-success bg-gray-9 text-white" id="power_module_min_voltage" value="{{power_module_min_voltage}}" step="0.1" name="input" placeholder="例：5">
+    </div>
+    <div class="form-group">
+        <label for="power_module_resistance" class="bg-dark text-white">電源1つの抵抗[mΩ]</label>
+        <input type="number" class="form-control border-success bg-gray-9 text-white" id="power_module_resistance" value="{{power_module_resistance}}" name="input" placeholder="例：1">
+    </div>
+    <div class="form-group">
+        <label for="test_resistance" class="bg-dark text-white">試験体の抵抗[mΩ]</label>
+        <input type="number" class="form-control border-success bg-gray-9 text-white" id="test_resistance" value="{{test_resistance}}" name="input" placeholder="例：1">
+    </div>
+    <div class="form-group">
+        <label for="external_resistances" class="bg-dark text-white">外部短絡抵抗[mΩ]</label>
+        <input type="text" class="form-control border-success bg-gray-9 text-white" id="external_resistances" value="{{external_resistances}}" name="input"
+            placeholder="例：1,10,100">
+    </div>
+    <div class="form-group">
+        <label for="line_resistance" class="bg-dark text-white">配線抵抗[mΩ]</label>
+        <input type="number" class="form-control border-success bg-gray-9 text-white" id="line_resistance" value="{{line_resistance}}" name="input" placeholder="例：1">
+    </div>
+    <button type="submit" class="btn btn-success">計算する</button>
+</form>
+
+{% if search_result != -1 %}
+<br>
+<h2 class="bg-dark text-white bg-gray-9">試験条件(電圧{{ target_voltage }}V, 電流{{ target_current }}A)に最も近い装置構成</h2>
+<table class="table table-dark">
+
+    <thead class="bg-dark text-white bg-gray-9">
+        <tr>
+            <th></th>{%- for i in error_min_result_columns %}<th>{{ i|e }}</th>{%- endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {%- for i in error_min_result_values %}
+        <tr>
+            <th>{{ error_min_result_index[loop.index0]|e }}</th>{% for j in i %}<td>{{ j|e }}</td>{% endfor %}
+        </tr>
+        {%- endfor %}
+    </tbody>
+</table>
+<br>
+    <img src="{{ save_graph_path }}" alt="graph.png" width="100%"/>
+    <br>
+<h2 class="bg-dark text-white bg-gray-9">試験条件(電圧{{ target_voltage }}V, 電流{{ target_current }}A)を満たす装置構成一覧</h2>
+<table class="table table-dark">
+
+    <thead class="bg-dark text-white bg-gray-9">
+        <tr>
+            {%- for i in result_columns %}<th>{{ i|e }}</th>{%- endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {%- for i in result_values %}
+        <tr>
+            {% for j in i %}<td>{{ j|e }}</td>{% endfor %}
+        </tr>
+        {%- endfor %}
+    </tbody>
+</table>
+
+{% else %}
+<p class="text-danger">試験条件(電圧{{ target_voltage }}V, 電流{{ target_current }}A)を満たす装置構成はありません。</p>
+    <img src="{{ save_graph_path }}" alt="graph.png" width="100%" />
+{% endif %}
+{% endblock %}

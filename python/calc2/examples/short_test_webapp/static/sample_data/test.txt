@@ -1,0 +1,10 @@
+[settings]
+target_voltage = 15
+target_current = 300
+power_module_num = 2
+power_module_max_voltage = 18
+power_module_min_voltage = 12
+power_module_resistance = 10
+test_resistance = 1
+line_resistance = 2
+external_resistances = 1,2,3

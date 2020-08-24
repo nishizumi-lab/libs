@@ -1,0 +1,4 @@
+flask
+electrical
+flask_sqlalchemy
+configparser

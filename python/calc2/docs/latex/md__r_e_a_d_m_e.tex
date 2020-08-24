@@ -1,0 +1,68 @@
+his Python library can perform various calculations for electrical systems. ~\newline
+ この\+Pythonライブラリは電気系の各種計算を行うことができます。
+
+\href{https://github.com/tanaka0079/libs/tree/master/python/electrical-python}{\texttt{ Github}} ~\newline
+ \href{https://tanaka0079.github.io/libs/python/electrical-python/docs/html/index.html}{\texttt{ Document}} ~\newline
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Getting started（導入）}\label{md__r_e_a_d_m_e_autotoc_md1}
+Install with {\ttfamily pip}. ~\newline
+ pipで簡単にインストールできます。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip install electrical}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{License（ライセンス）}\label{md__r_e_a_d_m_e_autotoc_md2}
+This sample code is licensed under the \href{https://github.com/nishizumi-lab/electrical/blob/master/LICENSE}{\texttt{ M\+IT License}}. ~\newline
+ サンプルコードは\+M\+I\+Tライセンスで公開しています。\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{How to use（使い方）}\label{md__r_e_a_d_m_e_autotoc_md3}
+The main functions and descriptions, documents and sample code are summarized in the table. ~\newline
+ 主な機能と説明、およびドキュメントとサンプルコードを表にまとめました。
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ function(機能) }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description(説明)  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ function(機能) }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description(説明)  }\\\cline{1-2}
+\endhead
+Parameter calculation for external short circuit test.（外部短絡試験のパラメータ計算） &Calculate the configuration of the external short-\/circuit test equipment that satisfies the required test conditions (target voltage, target current).要求される試験条件（目標電圧、目標電流）を満たす外部短絡試験装置の構成を計算します。●\href{https://tanaka0079.github.io/libs/python/electrical-python/docs/html/classelectrical_1_1short__test_1_1_short_test.html}{\texttt{ Document}} ●\href{https://github.com/tanaka0079/libs/tree/master/python/electrical-python/tests/short_test}{\texttt{ Sample code}}  \\\cline{1-2}
+Parameter calculation of three-\/phase AC circuit.\+三相交流回路のパラメータ計算 &The parameters of the three-\/phase AC circuit can be calculated from the given conditions. For example, when \char`\"{}line voltage\char`\"{}, \char`\"{}power consumption\char`\"{} and \char`\"{}power factor\char`\"{} are determined, \char`\"{}line current\char`\"{}, \char`\"{}impedance\char`\"{} and \char`\"{}phase voltage\char`\"{} can be calculated.\+与えられた条件から三相交流回路の各パラメータを計算できます。例えば、「線間電圧」「消費電力」「力率」が決まっているとき、「線電流」「インピーダンス」「相電圧」を計算できます。●\href{https://tanaka0079.github.io/libs/python/electrical-python/docs/html/classelectrical_1_1ac3_1_1_ac_phase3.html}{\texttt{ Document}} ●\href{https://github.com/tanaka0079/libs/tree/master/python/electrical-python/tests/ac3_test}{\texttt{ Sample code}}  \\\cline{1-2}
+Detailed analysis of pulse wave.\+パルス波の詳細解析 &Analyzes various parameters of pulse signals.\+パルス信号のさまざまなパラメーターを分析します。 ●\href{https://tanaka0079.github.io/libs/python/electrical-python/docs/html/classelectrical_1_1pulse_1_1_pulse.html}{\texttt{ Document}} ●\href{https://github.com/tanaka0079/libs/tree/master/python/electrical-python/tests/pulse_test}{\texttt{ Sample code}}  \\\cline{1-2}
+Battery capacity measurement.\+蓄電池の容量測定 &Analyze the data obtained in the storage battery capacity measurement (discharge, charge, discharge).蓄電池の容量測定（捨て放電、充電、放電）で得られたデータを解析します。●\href{https://tanaka0079.github.io/libs/python/electrical-python/docs/html/classelectrical_1_1battery__test_1_1_battery_test.html}{\texttt{ Document}} ●\href{https://github.com/tanaka0079/libs/tree/master/python/electrical-python/tests/battery_test}{\texttt{ Sample code}}  \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Change log}\label{md__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\mbox{[}0.\+3.\+0.\+0\mbox{]} -\/ 2019-\/06-\/30 Added}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyItemize}
+\item 三相交流電力の計算機能を実装
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\mbox{[}0.\+4.\+0.\+0\mbox{]} -\/ 2019-\/07-\/01 Added}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyItemize}
+\item 外部短絡試験の試験条件からパラメータを計算する機能を実装
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\mbox{[}0.\+4.\+0.\+3\mbox{]} -\/ 2019-\/07-\/01 Added}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyItemize}
+\item 電源の合成内部抵抗を計算する際に、電源の最大値が9に固定されていた不具合を修正
+\item 入力パラメータ（電源パラメータ）から電源の直並列最大数を削除し、電源数の最大値を追加
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{\mbox{[}0.\+4.\+0.\+4\mbox{]} -\/ 2019-\/07-\/01 Added}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyItemize}
+\item ac.\+py→ac3.\+pyに修正 -\/ac3.\+pyのメソッド名、引数名を修正
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\mbox{[}0.\+4.\+2.\+0\mbox{]} -\/ 2020-\/02-\/03 Added}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyItemize}
+\item 蓄電池の容量測定データの解析機能を実装
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{参考文献}\label{md__r_e_a_d_m_e_autotoc_md10}
+\href{https://pypi.org/manage/project/electrical/releases/}{\texttt{ Pypi electrical}} ~\newline
+ \href{http://www.chuden.co.jp/home/information/chishiki/mame_bort/index.html}{\texttt{ 電気のマメ知識 ボルト・アンペア・ワット}} ~\newline
+ \href{https://lab4ict.com/system/archives/1242}{\texttt{ 所要電力（皮相電力）と電流を計算}} ~\newline
+ \href{https://eleking.net/study/s-accircuit/sac-3phasepower.html}{\texttt{ 三相電力の公式はなぜ√3倍なのか？（三相電力の公式の導出）}} ~\newline
+ \href{https://www.nippon-heater.co.jp/designmaterials/threephase-calculation-program/}{\texttt{ 三相交流計算}} ~\newline
+ \href{https://www.nippon-heater.co.jp/designmaterials/ohmslaw-program/}{\texttt{ 電圧・電流・抵抗・電力の計算プログラム}} ~\newline
+ \href{https://www.fintech.co.jp/sah/software-frame.htm}{\texttt{ 技術計算ソフトウエア -\/ フィンテック}} ~\newline
+ \href{https://www.hakko.co.jp/qa/qakit/html/s03020.htm}{\texttt{ ヒーターについて： 三相デルタ結線の計算}} ~\newline
+ \href{https://qiita.com/Ted-HM/items/7dde25dcffae4cdc7923}{\texttt{ プログラミングでよく使う英単語のまとめ【随時更新】}} ~\newline
+ \href{https://qiita.com/cvusk/items/00294f7f0cb38f420584}{\texttt{ Pythonのパッケージを作って\+Py\+P\+Iに登録する}} ~\newline
+ 

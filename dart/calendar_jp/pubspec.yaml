@@ -1,0 +1,14 @@
+name: calendar_jp
+description: Convert the year and the Japanese calendar mutually.
+version: 0.0.7
+homepage: https://github.com/tanaka0079/dart/calendar_jp
+
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+
+#dependencies:
+#  path: ^1.4.1
+
+#dev_dependencies:
+#  test: ^1.5.1

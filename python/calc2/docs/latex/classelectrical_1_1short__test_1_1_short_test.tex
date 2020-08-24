@@ -1,0 +1,179 @@
+\hypertarget{classelectrical_1_1short__test_1_1_short_test}{}\doxysection{electrical.\+short\+\_\+test.\+Short\+Test Class Reference}
+\label{classelectrical_1_1short__test_1_1_short_test}\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_a0c97028b68a466c8ad41e65a3c319090}{calc\+\_\+resistance}} (self, resistance, series\+\_\+num, parallel\+\_\+num)
+\item 
+def \mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_a617d2f55dd7a46fad45fc43fa1fc973e}{make\+\_\+table}} (self, power\+\_\+module\+\_\+num, power\+\_\+module\+\_\+resistance, test\+\_\+resistance, \mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_a20a5a604716ece4572aaf88e629df6e8}{external\+\_\+resistances}}, line\+\_\+resistance, power\+\_\+module\+\_\+max\+\_\+voltage, power\+\_\+module\+\_\+min\+\_\+voltage)
+\begin{DoxyCompactList}\small\item\em Create an impedance pattern table(インピーダンスのパターン表を作成します) \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_aaabd5627317590883b9e3d562445eb7b}{search\+\_\+pattern}} (self, \mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_ad5cda7807fa782b00b9beaa2d806e051}{target\+\_\+current}}, \mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_accbdf532b5439f2a1c8ad8919d6d7e86}{target\+\_\+voltage}}, round\+\_\+num=0)
+\begin{DoxyCompactList}\small\item\em Search for a combination of power supply and external short-\/circuit resistance that satisfies the target current (output the result as a mask)目標電流を満たす電源・外部短絡抵抗の組合せを検索（結果をマスクで出力） \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_ab54688d5438000dfaf53b72822a109cd}{save\+\_\+csv}} (self, path)
+\item 
+def \mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_a455487fd5f05191185f27381bc95d779}{save\+\_\+excel}} (self, path)
+\item 
+def \mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_a3f9aee94d07e2e1ac30022e4f854380e}{save\+\_\+graph}} (self, save\+\_\+file\+\_\+path, fig\+\_\+size\+\_\+x, fig\+\_\+size\+\_\+y, lim\+\_\+font\+\_\+size, loc=\char`\"{}upper left\char`\"{}, x\+\_\+lim=None, y\+\_\+lim=None, bbox\+\_\+to\+\_\+anchor=(-\/1, 0), borderaxespad=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_a20a5a604716ece4572aaf88e629df6e8}{external\+\_\+resistances}}
+\item 
+\mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_a0f0262c38ea1c722147cb317e63e0f17}{df}}
+\item 
+\mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_accbdf532b5439f2a1c8ad8919d6d7e86}{target\+\_\+voltage}}
+\item 
+\mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_ad5cda7807fa782b00b9beaa2d806e051}{target\+\_\+current}}
+\item 
+\mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_af26f3e495c38eab690dcd24686360f19}{ss\+\_\+min\+\_\+current\+\_\+error}}
+\item 
+\mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_acced82be886af5588bb1b1670807130f}{ss\+\_\+min\+\_\+voltage\+\_\+error}}
+\item 
+\mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_a63e8d68bc9307f6a40fe483ab76541d9}{df\+\_\+result}}
+\item 
+\mbox{\hyperlink{classelectrical_1_1short__test_1_1_short_test_a6d1c9272d9d9db85bb86309293a08791}{df\+\_\+error\+\_\+min\+\_\+result}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_a0c97028b68a466c8ad41e65a3c319090}\label{classelectrical_1_1short__test_1_1_short_test_a0c97028b68a466c8ad41e65a3c319090}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!calc\_resistance@{calc\_resistance}}
+\index{calc\_resistance@{calc\_resistance}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{calc\_resistance()}{calc\_resistance()}}
+{\footnotesize\ttfamily def electrical.\+short\+\_\+test.\+Short\+Test.\+calc\+\_\+resistance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resistance,  }\item[{}]{series\+\_\+num,  }\item[{}]{parallel\+\_\+num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_a617d2f55dd7a46fad45fc43fa1fc973e}\label{classelectrical_1_1short__test_1_1_short_test_a617d2f55dd7a46fad45fc43fa1fc973e}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!make\_table@{make\_table}}
+\index{make\_table@{make\_table}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{make\_table()}{make\_table()}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+make\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{power\+\_\+module\+\_\+num,  }\item[{}]{power\+\_\+module\+\_\+resistance,  }\item[{}]{test\+\_\+resistance,  }\item[{}]{external\+\_\+resistances,  }\item[{}]{line\+\_\+resistance,  }\item[{}]{power\+\_\+module\+\_\+max\+\_\+voltage,  }\item[{}]{power\+\_\+module\+\_\+min\+\_\+voltage }\end{DoxyParamCaption})}
+
+
+
+Create an impedance pattern table(インピーダンスのパターン表を作成します) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em power\+\_\+module\+\_\+num} & Maximum number of power supplies\mbox{[}電源モジュールの最大個数\mbox{]} \\
+\hline
+{\em power\+\_\+module\+\_\+resistance} & Internal resistance per power supply\mbox{[}電源モジュールの内部抵抗\mbox{]} \\
+\hline
+{\em test\+\_\+resistance} & Test resistance\mbox{[}試験体の抵抗mΩ\mbox{]} \\
+\hline
+{\em external\+\_\+resistances} & External short-\/circuit resistance\mbox{[}外部短絡抵抗のパターンmΩ\mbox{]} \\
+\hline
+{\em line\+\_\+resistance} & Wiring resistance\mbox{[}配線抵抗mΩ\mbox{]} \\
+\hline
+{\em power\+\_\+module\+\_\+max\+\_\+voltage} & Max voltage)\mbox{[}電源のモジュール最大電圧V\mbox{]} \\
+\hline
+{\em power\+\_\+module\+\_\+min\+\_\+voltage} & Min voltage\mbox{[}電源のモジュール最小電圧V\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em df} & Dataframe of impidance table constant\mbox{[}Dataframe\+:インピーダンスのパターン表\mbox{]} \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_ab54688d5438000dfaf53b72822a109cd}\label{classelectrical_1_1short__test_1_1_short_test_ab54688d5438000dfaf53b72822a109cd}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!save\_csv@{save\_csv}}
+\index{save\_csv@{save\_csv}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{save\_csv()}{save\_csv()}}
+{\footnotesize\ttfamily def electrical.\+short\+\_\+test.\+Short\+Test.\+save\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_a455487fd5f05191185f27381bc95d779}\label{classelectrical_1_1short__test_1_1_short_test_a455487fd5f05191185f27381bc95d779}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!save\_excel@{save\_excel}}
+\index{save\_excel@{save\_excel}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{save\_excel()}{save\_excel()}}
+{\footnotesize\ttfamily def electrical.\+short\+\_\+test.\+Short\+Test.\+save\+\_\+excel (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_a3f9aee94d07e2e1ac30022e4f854380e}\label{classelectrical_1_1short__test_1_1_short_test_a3f9aee94d07e2e1ac30022e4f854380e}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!save\_graph@{save\_graph}}
+\index{save\_graph@{save\_graph}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{save\_graph()}{save\_graph()}}
+{\footnotesize\ttfamily def electrical.\+short\+\_\+test.\+Short\+Test.\+save\+\_\+graph (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{save\+\_\+file\+\_\+path,  }\item[{}]{fig\+\_\+size\+\_\+x,  }\item[{}]{fig\+\_\+size\+\_\+y,  }\item[{}]{lim\+\_\+font\+\_\+size,  }\item[{}]{loc = {\ttfamily \char`\"{}upper~left\char`\"{}},  }\item[{}]{x\+\_\+lim = {\ttfamily None},  }\item[{}]{y\+\_\+lim = {\ttfamily None},  }\item[{}]{bbox\+\_\+to\+\_\+anchor = {\ttfamily (-\/1,~0)},  }\item[{}]{borderaxespad = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_aaabd5627317590883b9e3d562445eb7b}\label{classelectrical_1_1short__test_1_1_short_test_aaabd5627317590883b9e3d562445eb7b}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!search\_pattern@{search\_pattern}}
+\index{search\_pattern@{search\_pattern}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{search\_pattern()}{search\_pattern()}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+search\+\_\+pattern (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{target\+\_\+current,  }\item[{}]{target\+\_\+voltage,  }\item[{}]{round\+\_\+num = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Search for a combination of power supply and external short-\/circuit resistance that satisfies the target current (output the result as a mask)目標電流を満たす電源・外部短絡抵抗の組合せを検索（結果をマスクで出力） 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+current} & Current of target\mbox{[}目標電流\mbox{]} \\
+\hline
+{\em target\+\_\+voltage} & Voltage of target\mbox{[}目標電圧\mbox{]} \\
+\hline
+{\em round\+\_\+num} & round number(default\+:0)\mbox{[}小数点の桁数\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em df\+\_\+result} & List of equipment configuration that satisfies the test conditions\mbox{[}試験条件を満たす装置構成一覧（ 電源を○直○並で接続し、外部短絡抵抗を○mΩにするか）\mbox{]} \\
+\hline
+{\em ss\+\_\+min\+\_\+current\+\_\+error} & When the output current of the power supply is matched with the test conditions, the device configuration when the output current of the power supply is closest to the target current.\mbox{[}電源の出力電圧を試験条件と一致させた場合、電源の出力電流が目標電流に最も近いときの装置構成（ 電源を○直○並で接続し、外部短絡抵抗を○mΩにするか）\mbox{]} \\
+\hline
+{\em ss\+\_\+min\+\_\+voltage\+\_\+error} & When the output voltage of the power supply is matched with the test conditions, the device configuration when the output current of the power supply is closest to the target current.（ 電源を○直○並で接続し、外部短絡抵抗を○mΩにするか）\mbox{]} \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_a0f0262c38ea1c722147cb317e63e0f17}\label{classelectrical_1_1short__test_1_1_short_test_a0f0262c38ea1c722147cb317e63e0f17}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!df@{df}}
+\index{df@{df}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+df}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_a6d1c9272d9d9db85bb86309293a08791}\label{classelectrical_1_1short__test_1_1_short_test_a6d1c9272d9d9db85bb86309293a08791}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!df\_error\_min\_result@{df\_error\_min\_result}}
+\index{df\_error\_min\_result@{df\_error\_min\_result}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{df\_error\_min\_result}{df\_error\_min\_result}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+df\+\_\+error\+\_\+min\+\_\+result}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_a63e8d68bc9307f6a40fe483ab76541d9}\label{classelectrical_1_1short__test_1_1_short_test_a63e8d68bc9307f6a40fe483ab76541d9}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!df\_result@{df\_result}}
+\index{df\_result@{df\_result}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{df\_result}{df\_result}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+df\+\_\+result}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_a20a5a604716ece4572aaf88e629df6e8}\label{classelectrical_1_1short__test_1_1_short_test_a20a5a604716ece4572aaf88e629df6e8}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!external\_resistances@{external\_resistances}}
+\index{external\_resistances@{external\_resistances}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{external\_resistances}{external\_resistances}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+external\+\_\+resistances}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_af26f3e495c38eab690dcd24686360f19}\label{classelectrical_1_1short__test_1_1_short_test_af26f3e495c38eab690dcd24686360f19}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!ss\_min\_current\_error@{ss\_min\_current\_error}}
+\index{ss\_min\_current\_error@{ss\_min\_current\_error}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{ss\_min\_current\_error}{ss\_min\_current\_error}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+ss\+\_\+min\+\_\+current\+\_\+error}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_acced82be886af5588bb1b1670807130f}\label{classelectrical_1_1short__test_1_1_short_test_acced82be886af5588bb1b1670807130f}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!ss\_min\_voltage\_error@{ss\_min\_voltage\_error}}
+\index{ss\_min\_voltage\_error@{ss\_min\_voltage\_error}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{ss\_min\_voltage\_error}{ss\_min\_voltage\_error}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+ss\+\_\+min\+\_\+voltage\+\_\+error}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_ad5cda7807fa782b00b9beaa2d806e051}\label{classelectrical_1_1short__test_1_1_short_test_ad5cda7807fa782b00b9beaa2d806e051}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!target\_current@{target\_current}}
+\index{target\_current@{target\_current}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{target\_current}{target\_current}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+target\+\_\+current}
+
+\mbox{\Hypertarget{classelectrical_1_1short__test_1_1_short_test_accbdf532b5439f2a1c8ad8919d6d7e86}\label{classelectrical_1_1short__test_1_1_short_test_accbdf532b5439f2a1c8ad8919d6d7e86}} 
+\index{electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}!target\_voltage@{target\_voltage}}
+\index{target\_voltage@{target\_voltage}!electrical.short\_test.ShortTest@{electrical.short\_test.ShortTest}}
+\doxysubsubsection{\texorpdfstring{target\_voltage}{target\_voltage}}
+{\footnotesize\ttfamily electrical.\+short\+\_\+test.\+Short\+Test.\+target\+\_\+voltage}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+electrical/\mbox{\hyperlink{short__test_8py}{short\+\_\+test.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,49 @@
+\hypertarget{classelectrical_1_1battery__test_1_1_battery_test}{}\doxysection{electrical.\+battery\+\_\+test.\+Battery\+Test Class Reference}
+\label{classelectrical_1_1battery__test_1_1_battery_test}\index{electrical.battery\_test.BatteryTest@{electrical.battery\_test.BatteryTest}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classelectrical_1_1battery__test_1_1_battery_test_a199269a5e9a385214522d1aebd4c06af}{capacity\+\_\+measurement\+\_\+kwh}} (self, time, kw, sampling\+\_\+time=1, save\+\_\+dir\+\_\+path=None, stop\+\_\+charge\+\_\+kw=0.\+0, stop\+\_\+discharge\+\_\+kw=0.\+0, graph\+\_\+time\+\_\+unit=\char`\"{}h\char`\"{})
+\begin{DoxyCompactList}\small\item\em Analyzes battery capacity measurement data(in kw).電池の容量測定データ（kw単位）を解析します。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classelectrical_1_1battery__test_1_1_battery_test_a199269a5e9a385214522d1aebd4c06af}\label{classelectrical_1_1battery__test_1_1_battery_test_a199269a5e9a385214522d1aebd4c06af}} 
+\index{electrical.battery\_test.BatteryTest@{electrical.battery\_test.BatteryTest}!capacity\_measurement\_kwh@{capacity\_measurement\_kwh}}
+\index{capacity\_measurement\_kwh@{capacity\_measurement\_kwh}!electrical.battery\_test.BatteryTest@{electrical.battery\_test.BatteryTest}}
+\doxysubsubsection{\texorpdfstring{capacity\_measurement\_kwh()}{capacity\_measurement\_kwh()}}
+{\footnotesize\ttfamily electrical.\+battery\+\_\+test.\+Battery\+Test.\+capacity\+\_\+measurement\+\_\+kwh (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{time,  }\item[{}]{kw,  }\item[{}]{sampling\+\_\+time = {\ttfamily 1},  }\item[{}]{save\+\_\+dir\+\_\+path = {\ttfamily None},  }\item[{}]{stop\+\_\+charge\+\_\+kw = {\ttfamily 0.0},  }\item[{}]{stop\+\_\+discharge\+\_\+kw = {\ttfamily 0.0},  }\item[{}]{graph\+\_\+time\+\_\+unit = {\ttfamily \char`\"{}h\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Analyzes battery capacity measurement data(in kw).電池の容量測定データ（kw単位）を解析します。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & times-\/series.\+Series形式の時間。 \\
+\hline
+{\em sampling\+\_\+time} & sampling time sec(default\+:).サンプリング時間。 \\
+\hline
+{\em save\+\_\+dir\+\_\+path} & save directry path.\+保存先のディレクトリパス。 \\
+\hline
+{\em stop\+\_\+charge\+\_\+kw} & stop charge kw(default\+:0.\+0).充電停止時の出力電力。 \\
+\hline
+{\em stop\+\_\+discharge\+\_\+kw} & stop discharge kw(default\+:0.\+0).放電停止時の出力電力。 \\
+\hline
+{\em graph\+\_\+time\+\_\+unit} & graph time unit(default\+:h).グラフの時間軸の単位。 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em param} & kw\+\_\+max, kw\+\_\+min, pre\+\_\+discharge\+\_\+kwh\+\_\+sum, pre\+\_\+discharge\+\_\+time, charge\+\_\+kwh\+\_\+sum, charge\+\_\+time, discharge\+\_\+kwh\+\_\+sum, discharge\+\_\+time.\+出力の最大値・最小値、捨て放電時間、捨て放電の電力量、充電の電力量、放電の電力量。 \\
+\hline
+{\em df} & dataframe.\+電力量を追加したデータフレーム。 \\
+\hline
+{\em dst} & dictionary.\+辞書型。 \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+electrical/\mbox{\hyperlink{battery__test_8py}{battery\+\_\+test.\+py}}\end{DoxyCompactItemize}
