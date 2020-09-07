@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
-
+import itertools
 
 class ShortTest():
     # 合成抵抗の計算
@@ -13,6 +13,15 @@ class ShortTest():
 
         # 並列分の計算
         return 1. / np.sum(1. / resistance_series)
+
+    def calc_external_resistances(self, resistance_list):
+        external_resistances = []
+        external_resistance_patterns = []
+        for i in range(1, len(resistance_list)+1):
+            els = [list(x) for x in itertools.combinations(resistance_list, i)]
+            external_resistance_patterns.extend(els)
+
+        return [sum(x) for x in external_resistance_patterns]
 
     ##
     # @fn make_table
@@ -38,7 +47,8 @@ class ShortTest():
         # 直並列数のパターンを列に追加
         series_nums = []
         parallel_nums = []
-        self.external_resistances = external_resistances
+        self.external_resistances = self.calc_external_resistances(external_resistances)
+        print(self.external_resistances)
 
         for j in range(power_module_num):
             list_r = []
@@ -66,7 +76,7 @@ class ShortTest():
         df["min_voltage"] = df["Series_num"] * power_module_min_voltage
 
         # 外部抵抗値に応じて回路全体の抵抗、電流（最大値、最小値）を計算
-        for external_resistance in external_resistances:
+        for external_resistance in self.external_resistances:
             # 回路全体の抵抗を計算（電源の内部抵抗 + 外部短絡装置の抵抗 + 配線抵抗）を計算し、列に追加
             df["external_resistance" + str(external_resistance)] = df["power_module_resistance"] + \
                 external_resistance + line_resistance + test_resistance
@@ -312,7 +322,7 @@ def main():
     POWER_MODULE_MIN_VOLTAGE = 10.4  # 電源1つ(1直1並)あたりの最小電圧[V]
     POWER_MODULE_MAX_VOLTAGE = 21.6  # 電源1つ(1直1並)あたりの最大電圧[V]
     # 外部短絡装置の可変抵抗組み合わせパターン(昇順に並べる)
-    EXTERNAL_RESISTANCES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    EXTERNAL_RESISTANCES = [1, 2, 3, 4]
     # 計算結果の保存先パス
     PATH = "C:/github/libs/python/calc2/examples/short_test/"
     ROUND_NUM = 2  # 小数点の桁数

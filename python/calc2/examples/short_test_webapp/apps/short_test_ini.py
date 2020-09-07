@@ -103,7 +103,7 @@ def short_test_ini():
         if external_resistances == ['']:
             external_resistances = [0]
         else:
-            external_resistances = list(map(int, external_resistances))
+            external_resistances = list(map(float, external_resistances))
 
         st = ShortTest()
         # 一覧表を作成・保存

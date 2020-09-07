@@ -9,7 +9,6 @@ from apps import index, short_test, short_test_ini
 
 app = Flask(__name__)
 
-
 # 分割先のコントローラー(Blueprint)を登録
 app.register_blueprint(index.app)
 app.register_blueprint(short_test.app)
