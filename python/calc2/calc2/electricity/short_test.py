@@ -161,7 +161,7 @@ class ShortTest():
 
                 # データフレームに追加
                 df_result.loc[key + "-" +
-                              str(value[i])] = [key + "-" + str(value[i]), min_current, max_current, max_voltage, min_voltage, current, voltage]
+                              str(value[i])] = [key + "-" + str(value[i]), min_current, max_current, min_voltage, max_voltage, current, voltage]
 
         # 目標電流値と理論電流値との絶対誤差を計算（電源電圧を目標値に固定した場合）
         df_result["Current error"] = (

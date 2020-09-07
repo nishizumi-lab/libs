@@ -4,7 +4,7 @@
     <a class="text-white" href="">{{page_title}}</a>
     <a class="text-white" href="../">TOP PAGE</a>
     <a class="text-white" href="static/sample_data/test.txt">ファイルのサンプル</a>
-    <a class="text-white" href="https://github.com/nishizumi-lab/libs/tree/master/python/electrical-python/tests/short_test_webapp/">ソースコード</a>
+    <a class="text-white" href="https://github.com/tanaka0079/libs/tree/master/python/calc2/examples/short_test_webapp">ソースコード</a>
 </nav>
 <br>
 <form action="/short_test_ini" method="POST" enctype="multipart/form-data"  class="text-white">
@@ -15,7 +15,19 @@
 
 {% if search_result != -1 %}
 <br>
-<h2 class="bg-dark text-white bg-gray-9">試験条件(電圧{{ target_voltage }}V, 電流{{ target_current }}A)に最も近い装置構成</h2>
+<h2 class="bg-dark text-white bg-gray-9">読み込んだ設定値（試験条件と装置スペック）</h2>
+<ul class="milestones text-white">
+    <li>試験電圧[V]：{{target_voltage}}</li>
+    <li>試験電流[A]：{{target_current}}</li>
+    <li>電源数[S]：{{power_module_num}}</li>
+    <li>電源1つの最大電圧[V]：{{power_module_max_voltage}}</li>
+    <li>電源1つの最小電圧[V]：{{power_module_min_voltage}}</li>
+    <li>電源1つの抵抗[mΩ]：{{power_module_resistance}}</li>
+    <li>試験体の抵抗[mΩ]：{{test_resistance}}</li>
+    <li>外部短絡抵抗[mΩ]：{{external_resistances}}</li>
+    <li>配線抵抗[mΩ]：{{line_resistance}}</li>
+</ul>
+<h2 class="bg-dark text-white bg-gray-9">計算結果（試験条件に最も近い装置構成）</h2>
 <table class="table table-dark">
 
     <thead class="bg-dark text-white bg-gray-9">
@@ -34,7 +46,7 @@
 <br>
     <img src="{{ save_graph_path }}" alt="graph.png" width="100%"/>
     <br>
-<h2 class="bg-dark text-white bg-gray-9">試験条件(電圧{{ target_voltage }}V, 電流{{ target_current }}A)を満たす装置構成一覧</h2>
+<h2 class="bg-dark text-white bg-gray-9">計算結果（試験条件を満たす装置構成全て）</h2>
 <table class="table table-dark">
 
     <thead class="bg-dark text-white bg-gray-9">
@@ -52,6 +64,17 @@
 </table>
 
 {% else %}
+<ul class="milestones text-white">
+    <li>試験電圧[V]：{{target_voltage}}</li>
+    <li>試験電流[A]：{{target_current}}</li>
+    <li>電源数[S]：{{power_module_num}}</li>
+    <li>電源1つの最大電圧[V]：{{power_module_max_voltage}}</li>
+    <li>電源1つの最小電圧[V]：{{power_module_min_voltage}}</li>
+    <li>電源1つの抵抗[mΩ]：{{power_module_resistance}}</li>
+    <li>試験体の抵抗[mΩ]：{{test_resistance}}</li>
+    <li>外部短絡抵抗[mΩ]：{{external_resistances}}</li>
+    <li>配線抵抗[mΩ]：{{line_resistance}}</li>
+</ul>
 <p class="text-danger">試験条件(電圧{{ target_voltage }}V, 電流{{ target_current }}A)を満たす装置構成はありません。</p>
     <img src="{{ save_graph_path }}" alt="graph.png" width="100%" />
 {% endif %}

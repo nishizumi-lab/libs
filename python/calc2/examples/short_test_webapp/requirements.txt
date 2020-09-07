@@ -1,4 +1,5 @@
 flask
-electrical
+calc2
+util2
 flask_sqlalchemy
 configparser

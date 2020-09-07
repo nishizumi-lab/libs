@@ -48,7 +48,7 @@ def delete_files(top):
 # short_testにアクセスされた場合の処理
 @app.route('/short_test_ini', methods=['GET', 'POST'])
 def short_test_ini():
-    PAGE_TITLE = "外部短絡試験計算機 ver0.1.0"
+    PAGE_TITLE = "外部短絡試験計算機 ver0.1.1"
     INPUT_NAME = 'file1'
     HTML_PATH = 'short_test_ini.html'
     if request.method == 'POST':

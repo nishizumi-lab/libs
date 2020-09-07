@@ -1,6 +1,6 @@
 # About
-his Python library can perform various calculations for electrical systems.  
-このPythonライブラリは電気系の各種計算を行うことができます。
+This Python library can perform various calculations for scientific field.  
+このPythonライブラリは科学分野の各種計算を行うことができます。
   
 [Document](https://tanaka0079.github.io/libs/python/calc2/docs/html/index.html)   
 [Pypl](https://pypi.org/project/calc2/)  
@@ -45,20 +45,3 @@ https://github.com/tanaka0079/libs/blob/master/python/calc2/examples/battery_cap
 ## Source Code
 
 ●[Source Code](https://github.com/tanaka0079/libs/tree/master/python/calc2/calc2/electricity)
-
-## Change log
-[0.3.0.0] - 2019-06-30 Added  
-三相交流電力の計算機能を実装  
-
-[0.4.0.0] - 2019-07-01 Added    
-外部短絡試験の試験条件からパラメータを計算する機能を実装  
-
-[0.4.0.3] - 2019-07-01 Added    
-電源の合成内部抵抗を計算する際に、電源の最大値が9に固定されていた不具合を修正  
-入力パラメータ（電源パラメータ）から電源の直並列最大数を削除し、電源数の最大値を追加  
-
-[0.4.0.4] - 2019-07-01 Added    
-ac.py→ac3.pyに修正 -ac3.pyのメソッド名、引数名を修正  
-
-[0.4.2.0] - 2020-02-03 Added  
-蓄電池の容量測定データの解析機能を実装  
