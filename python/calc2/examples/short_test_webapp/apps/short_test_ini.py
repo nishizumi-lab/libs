@@ -5,7 +5,7 @@ import datetime
 import os
 import numpy as np
 import pandas as pd
-from electrical.short_test import ShortTest
+from calc2.electricity.short_test import ShortTest
 import io
 import base64
 import configparser

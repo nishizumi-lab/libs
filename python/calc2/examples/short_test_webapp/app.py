@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 import numpy as np
 import pandas as pd
-from electrical.short_test import ShortTest
+from calc2.electricity.short_test import ShortTest
 from apps import index, short_test, short_test_ini
 
 app = Flask(__name__)
