@@ -103,6 +103,8 @@ class ShortTest():
     # @retval ss_min_current_error When the output current of the power supply is matched with the test conditions, the device configuration when the output current of the power supply is closest to the target current.[電源の出力電圧を試験条件と一致させた場合、電源の出力電流が目標電流に最も近いときの装置構成（ 電源を○直○並で接続し、外部短絡抵抗を○mΩにするか）]
     # @retval ss_min_voltage_error When the output voltage of the power supply is matched with the test conditions, the device configuration when the output current of the power supply is closest to the target current.（ 電源を○直○並で接続し、外部短絡抵抗を○mΩにするか）]
     def search_pattern(self, target_current, target_voltage, round_num=0):
+
+        # ★目標電流を満たす電源・外部短絡抵抗の組合せを検索（結果をマスクで出力）
         df_min_current = self.df.loc[:, 'min_current_ext' +
                                      str(self.external_resistances[0]):'min_current_ext' + str(self.external_resistances[-1])]
         df_max_current = self.df.loc[:, 'max_current_ext' +
@@ -110,16 +112,16 @@ class ShortTest():
         df_min_current_mask = (df_min_current <= target_current)
         df_max_current_mask = (target_current <= df_max_current)
 
-        # 目標電圧を満たす電源・外部短絡抵抗の組合せを検索（結果をマスクで出力）
+        # ★目標電圧を満たす電源・外部短絡抵抗の組合せを検索（結果をマスクで出力）
         df_min_voltage = self.df.loc[:, 'min_voltage']
         df_max_voltage = self.df.loc[:, 'max_voltage']
         df_min_voltage_mask = (df_min_voltage <= target_voltage)
         df_max_voltage_mask = (target_voltage <= df_max_voltage)
 
-        # 目標値用のデータフレーム作成
+        # ★目標値用のデータフレーム作成
         df_target = df_min_current.copy()
 
-        # 目標電圧・電流を満たす電源と外部短絡抵抗を検索（結果をマスクで出力）
+        # ★★目標電圧・電流を満たす電源と外部短絡抵抗を検索（結果をマスクで出力）
         for external_resistance in self.external_resistances:
             df_target['ext' + str(external_resistance)] = df_min_current_mask['min_current_ext' + str(
                 external_resistance)] & df_max_current_mask['max_current_ext' + str(external_resistance)] & df_min_voltage_mask & df_max_voltage_mask
@@ -134,7 +136,7 @@ class ShortTest():
 
         result_ext_dict = {}
 
-        # 目標電圧・目標電流を電源・両方満たす外部短絡抵抗の組合せを取得
+        # 目標電圧・目標電流を電源・両方満たす外部短絡抵抗の組合せを取得(True:マスクの真)
         for pattern in patterns:
             result = df_target[df_target[pattern] == True].index.tolist()
             if result:
@@ -312,6 +314,7 @@ class ShortTest():
 
 def main():
     # 試験条件
+    """
     TARGET_CURRENT = 2500  # 目標電流値[A]
     TARGET_VOLTAGE = 40  # 目標電圧値[V]
     TEST_RESISTANCE = 0  # 試験体の抵抗[mΩ]
@@ -323,9 +326,21 @@ def main():
     POWER_MODULE_MAX_VOLTAGE = 21.6  # 電源1つ(1直1並)あたりの最大電圧[V]
     # 外部短絡装置の可変抵抗組み合わせパターン(昇順に並べる)
     EXTERNAL_RESISTANCES = [1, 2, 3, 4]
+    """
+    TARGET_CURRENT = 2500  # 目標電流値[A]
+    TARGET_VOLTAGE = 150  # 目標電圧値[V]
+    TEST_RESISTANCE = 1  # 試験体の抵抗[mΩ]
+    OTHER_RESISTANCE = 0  # その他の抵抗値（端子台など）
+    LINE_RESISTANCE = 7  # 配線抵抗[mΩ]
+    POWER_MODULE_RESISTANCE = 40  # 電源1つ(1直1並)あたりの内部抵抗[mΩ]
+    POWER_MODULE_NUM = 8  # 電源の最大個数
+    POWER_MODULE_MIN_VOLTAGE = 107.2  # 電源1つ(1直1並)あたりの最小電圧[V]
+    POWER_MODULE_MAX_VOLTAGE = 180.4  # 電源1つ(1直1並)あたりの最大電圧[V]
+    # 外部短絡装置の可変抵抗組み合わせパターン(昇順に並べる)
+    EXTERNAL_RESISTANCES = [1.0,2.0,4.0,16.5,28.5,50.0]
     # 計算結果の保存先パス
-    PATH = "C:/github/libs/python/calc2/examples/short_test/"
-    ROUND_NUM = 2  # 小数点の桁数
+    PATH = "/Users/github/libs/python/calc2/examples/short_test"
+    ROUND_NUM = 8  # 小数点の桁数
     st = ShortTest()
 
     # 一覧表を作成・保存

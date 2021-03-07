@@ -14,7 +14,7 @@ info = sys.version_info
 
 setup(
     name='calc2',
-    version='0.3.0.3',
+    version='0.3.0.4',
     install_requires=["pandas", "matplotlib", "numpy", "xlwt", "openpyxl","scipy","scikit-learn","util2", "scipy"],
     description='This Python library can perform various calculations for scientific field. ',
     long_description=readme,
