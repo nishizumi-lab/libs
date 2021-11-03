@@ -2,15 +2,23 @@ library calc_wareki;
 
 class Calendar {
   Calendar() {}
-  // 年齢 → 干支
+
+  // 西暦 → 干支(十二支)
+  String yearToEto(int year) {
+    var arr = ["申", "酉", "戌", "亥", "子", "丑", "寅", "卯", "辰", "巳", "午", "未"];
+    return arr[year % 12];
+  }
+
+  // 西暦 → 干支(十二支 ローマ字)
   String yearToEto2(int year) {
     var arr = ["saru", "tori", "inu", "i", "ne", "ushi", "tora", "u", "tatsu", "mi", "uma", "hitsuji"];
     return arr[year % 12];
   }
 
-  String yearToEto(int year) {
-    var arr = ["申", "酉", "戌", "亥", "子", "丑", "寅", "卯", "辰", "巳", "午", "未"];
-    return arr[year % 12];
+  // 西暦 → 干支(十干)
+  String yearToEto10(int year) {
+    var arr = ["庚", "辛", "壬", "癸", "甲", "乙", "丙", "丁", "戊", "己"];
+    return arr[year % 10];
   }
 
   // 西暦 → 和暦

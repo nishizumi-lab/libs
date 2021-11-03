@@ -1,8 +1,9 @@
-name: calc_wareki
-description: calc for wareki
-version: 0.0.3
+name: denki
+description: calc of electricity
+version: 0.0.1
 homepage: https://github.com/nishizumi-lab/libs/tree/master/flutter/01_package/calc_wareki
 repository: https://github.com/nishizumi-lab/libs/tree/master/flutter/01_package/calc_wareki
+
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -15,6 +16,4 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
 flutter:
-
