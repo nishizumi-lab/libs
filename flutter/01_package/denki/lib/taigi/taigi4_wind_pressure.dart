@@ -1,19 +1,17 @@
-/*
-@brief Analyzes various parameters of pulse signals.
-@details Analyzes various parameters of pulse signals.
-*/
 library denki;
 
 class WindPressure {
   WindPressure() {}
 
-  //
-  // @fn calcW
-  // @brief 風力係数C、設計用速度圧q、受風面積Aから風圧荷重を計算します。
-  // @param C ：アレイ面，支持物構成材の風力係数
-  // @param q 設計用速度圧q（N・mିଶ）
-  // @param A アレイ面の受風面積，支持物構成材の鉛直投影面積A（mଶ）
-  // @retval アレイ，支持物構成材に作用する風圧荷重W（N）
+  /**
+   * @fn calcW
+   * @brief 風力係数C、設計用速度圧q、受風面積Aから風圧荷重を計算します。
+   * @param C ：アレイ面，支持物構成材の風力係数
+   * @param q 設計用速度圧q（N・mିଶ）
+   * @param A アレイ面の受風面積，支持物構成材の鉛直投影面積A（mଶ）
+   * @retval アレイ，支持物構成材に作用する風圧荷重W（N）
+   */
+
   double calcW(double C, double q, double A) {
     return C * q * A;
   }

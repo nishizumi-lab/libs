@@ -20,7 +20,9 @@ samples, guidance on mobile development, and a full API reference.
 #### 電気主任技術者関連
 
 [地上設置型太陽光発電システムの設計ガイドライン2019年版](https://www.nedo.go.jp/activities/ZZJP2_100060.html#guideline)
+
 [経済産業省 法令｜電力の安全](https://www.meti.go.jp/policy/safety_security/industrial_safety/law/index.html)
+
 [電気事業法　告示・内規等](https://www.meti.go.jp/policy/safety_security/industrial_safety/law/denjikokuji.html)
 
 
