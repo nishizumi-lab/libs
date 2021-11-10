@@ -1,7 +1,6 @@
-# denki
+# electric
 
-calc of electricity
-電気技術者向けの計算パッケージです。
+A new Flutter project.
 
 ## Getting Started
 
@@ -17,7 +16,7 @@ samples, guidance on mobile development, and a full API reference.
 ## 参考資料
 
 
-#### 電気主任技術者関連
+### 電気主任技術者関連
 
 [地上設置型太陽光発電システムの設計ガイドライン2019年版](https://www.nedo.go.jp/activities/ZZJP2_100060.html#guideline)
 
@@ -29,8 +28,9 @@ samples, guidance on mobile development, and a full API reference.
 ## Sample code
 
 ```
-    final wp = WindPressure();
+    // 速度圧qp
+    print(wp.calcQp(34, 1.194, 1.0)); // 828.1583999999998
 
     // 風圧荷重W
-    print(wp.calcW(1.0, 34, 2.0)); // 68.0
+    print(wp.calcW(828, 1.25, 1.0)); // 1035.0
 ```
