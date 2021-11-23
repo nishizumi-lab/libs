@@ -1,6 +1,7 @@
 # electric
 
 It is an electric calculation package
+[Documment](https://nishizumi-lab.github.io/libs/flutter/01_package/electric/docs/html/index.html)
 
 
 # 参考資料
