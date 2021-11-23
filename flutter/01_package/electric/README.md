@@ -1,22 +1,12 @@
 # electric
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
-
-## 参考資料
+It is an electric calculation package
 
 
-### 電気主任技術者関連
+# 参考資料
+
+
+## 電気主任技術者関連
 
 [地上設置型太陽光発電システムの設計ガイドライン2019年版](https://www.nedo.go.jp/activities/ZZJP2_100060.html#guideline)
 
@@ -24,8 +14,9 @@ samples, guidance on mobile development, and a full API reference.
 
 [電気事業法　告示・内規等](https://www.meti.go.jp/policy/safety_security/industrial_safety/law/denjikokuji.html)
 
+[JIS C 8955（太陽電池アレイ用支持物の設計用荷重算出方法）の改定内容](https://www.safety-chugoku.meti.go.jp/denki/hatsuden/taiyoukou/file/seminarshiryou2.pdf)
 
-## Sample code
+# Sample code
 
 ```
     // 速度圧qp
@@ -34,3 +25,5 @@ samples, guidance on mobile development, and a full API reference.
     // 風圧荷重W
     print(wp.calcW(828, 1.25, 1.0)); // 1035.0
 ```
+
+
