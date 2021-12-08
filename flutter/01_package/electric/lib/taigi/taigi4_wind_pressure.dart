@@ -7,28 +7,27 @@ class WindPressure {
   // @fn calcCa
   // @brief 太陽電池アレイの傾斜角度もしくは相対角度と設置形態から風圧係数Caを計算します。
   // @param theta 太陽電池アレイの傾斜角度もしくは相対角度(架台構造と地盤傾斜により決まる)[deg]
-  // @param type 設置形態。1:地上設置(正圧)、2:地上設置(負圧)、3:勾配屋根設置(正圧)、4:勾配屋根設置(負圧)、5:陸屋根設置(正圧、端部アレイ)、6:陸屋根設置(正圧、中央部アレイ)、7:陸屋根設置(負圧、端部アレイ)、8:陸屋根設置(負圧、中央部アレイ) ※ 正圧は順風、負圧は逆風ともいいます。
+  // @param type 設置形態。地上設置(正圧)、地上設置(負圧)、勾配屋根設置(正圧)、勾配屋根設置(負圧)、陸屋根設置(正圧、端部アレイ)、陸屋根設置(正圧、中央部アレイ)、陸屋根設置(負圧、端部アレイ)、陸屋根設置(負圧、中央部アレイ) ※ 正圧は順風、負圧は逆風ともいいます。
   // @retval アレイの風圧係数Ca
-  double calcCa(double theta, double type) {
-    // 1:地上設置(正圧)
+  double calcCa(double theta, String type){
     // 正圧は順風、負圧は逆風ともいいます。
-    if(type == 1){
+    if(type == "地上設置(正圧)"){
       return 0.35 + 0.055 * theta - 0.0005 * pow(theta,2);
     }
     // 2:地上設置(負圧)
-    else if(type == 2){
+    else if(type == "地上設置(負圧)"){
       return 0.85 + 0.048 * theta - 0.0005 * pow(theta,2);
     }
     // 3:勾配屋根設置(正圧)
-    else if(type == 3){
+    else if(type == "勾配屋根設置(正圧)"){
       return 1.14;
     }
     // 4:勾配屋根設置(負圧)
-    else if(type == 4){
+    else if(type == "勾配屋根設置(負圧)"){
       return 1.5 - 0.015 * theta;
     }
     // 5:陸屋根設置(正圧、端部アレイ)
-    else if(type == 5){
+    else if(type == "陸屋根設置(正圧、端部アレイ)"){
       if(theta <= 10){
         return 0.75;
       }
@@ -43,7 +42,7 @@ class WindPressure {
       }
     }
     // 6:陸屋根設置(正圧、中央部アレイ)
-    else if(type == 6){
+    else if(type == "陸屋根設置(正圧、中央部アレイ)"){
       if(theta <= 10){
         return 0.6;
       }
@@ -57,8 +56,7 @@ class WindPressure {
         return 0;
       }
     }
-    // 7:陸屋根設置(負圧、端部アレイ)
-    else if(type == 7){
+    else if(type == "陸屋根設置(負圧、端部アレイ)"){
       if(theta <= 10){
         return 0.6;
       }
@@ -72,8 +70,7 @@ class WindPressure {
         return 0;
       }
     }
-    // 8:陸屋根設置(負圧、中央部アレイ)
-    else if(type == 8){
+    else if(type == "陸屋根設置(負圧、中央部アレイ)"){
       if(theta <= 10){
         return 0.6;
       }
