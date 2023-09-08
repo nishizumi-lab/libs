@@ -14,14 +14,14 @@ info = sys.version_info
 
 setup(
     name='calc2',
-    version='0.3.0.4',
+    version='0.3.0.5',
     install_requires=["pandas", "matplotlib", "numpy", "xlwt", "openpyxl","scipy","scikit-learn","util2", "scipy"],
     description='This Python library can perform various calculations for scientific field. ',
     long_description=readme,
     long_description_content_type='text/markdown',
     author='Nishizumi',
     author_email='daiman003@yahoo.co.jp',
-    url='https://tanaka0079.github.io/libs/python/calc2/docs/html/index.html',
+    url='https://nishizumi-lab.github.io/libs/python/calc2/docs/html/index.html',
     packages=[
         'calc2',
         'calc2.electricity',
