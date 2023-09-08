@@ -32,7 +32,7 @@ The parameters of the three-phase AC circuit can be calculated from the given co
 
 与えられた条件から三相交流回路の各パラメータを計算できます。例えば、「線間電圧」「消費電力」「力率」が決まっているとき、「線電流」「インピーダンス」「相電圧」を計算できます。  
 
-- [Sample code](https://github.com/tanaka0079/libs/blob/master/python/calc2/examples/ac3_test/sample1.py)  
+- [Sample code](https://github.com/nishizumi-lab/libs/blob/master/python/calc2/examples/ac3_test/sample1.py)  
 
 
 ## Ex.3 Detailed analysis of pulse wave(パルス波の詳細解析)
