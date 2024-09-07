@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: calc2
-Version: 0.3.0.5
+Version: 0.3.0.6
 Summary: This Python library can perform various calculations for scientific field. 
 Home-page: https://nishizumi-lab.github.io/libs/python/calc2/docs/html/index.html
 Author: Nishizumi
@@ -40,7 +40,7 @@ Description: # About(このライブラリについて)
         
         与えられた条件から三相交流回路の各パラメータを計算できます。例えば、「線間電圧」「消費電力」「力率」が決まっているとき、「線電流」「インピーダンス」「相電圧」を計算できます。  
         
-        - [Sample code](https://github.com/tanaka0079/libs/blob/master/python/calc2/examples/ac3_test/sample1.py)  
+        - [Sample code](https://github.com/nishizumi-lab/libs/blob/master/python/calc2/examples/ac3_test/sample1.py)  
         
         
         ## Ex.3 Detailed analysis of pulse wave(パルス波の詳細解析)
